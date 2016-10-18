@@ -8,7 +8,10 @@
 #include <functional>
 #include <memory>
 #include <map>
+#include "BaseAutoFunction.h"
+#include "muan/units/units.h"
 
+using namespace muan::units;
 
 //<<<include>>>
 
@@ -21,7 +24,7 @@ namespace AutoClass {
 namespace AutoGenerator {
   //<<<generators>>>
 
-  std::map<std::string, std::function<std::unique_ptr<BaseAutoFunction>()>> GetAutoGenerators();
+  std::map<std::string, std::function<std::unique_ptr<lemonscript::BaseAutoFunction>()>> GetAutoGenerators();
 }
 
 #endif

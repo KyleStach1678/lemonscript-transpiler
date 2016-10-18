@@ -1,14 +1,20 @@
-Wait(Time time)
+Wait(Time wait_time)
 
 include {
   "muan/utils/timing_utils.h"
 }
 
+globals {
+  Time start_time
+}
+
 init {
-  Time start_time = lemon_var("start_time", muan::now());
+  // auto start_time = lemon_var("start_time", muan::now());
+  start_time = muan::now();
   return false;
 }
 
 periodic {
-  return (muan::now() - start_time < lemon_get("start_time"));
+  Time start_time = 0 * s;
+  return (muan::now() - start_time < wait_time);
 }

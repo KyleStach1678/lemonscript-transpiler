@@ -1,3 +1,3 @@
-std::unique_ptr<BaseAutoFunction> New<<<name>>>Command() {
+std::unique_ptr<lemonscript::BaseAutoFunction> New<<<name>>>Command() {
   return std::make_unique<AutoClass::<<<name>>>Class>();
 }
